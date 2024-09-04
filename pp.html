@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/scripts.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row mt-5" id="filter-buttons">
+        <div class="col-12">
+          <button class="btn mb-2 me-1 active" data-filter="all">Show all</button>
+          <button class="btn mb-2 mx-1" data-filter="nature">Nature</button>
+          <button class="btn mb-2 mx-1" data-filter="cars">Cars</button>
+          <button class="btn mb-2 mx-1" data-filter="people">People</button>
+        </div>
+      </div>
+
+      <div class="row px-2 mt-4 gap-3" id="filterable-cards">
+        <div class="card p-0" data-name="nature">
+          <img src="/img/nature1.jpg" alt="img">
+          <div class="card-body">
+            <h6 class="card-title">Fleur violet</h6>
+            <p class="card-text">Lorem ipsum dolor sit...</p>
+          </div>
+        </div>
+
+        <div class="card p-0" data-name="nature">
+          <img src="/img/nature2.jpg" alt="img">
+          <div class="card-body">
+            <h6 class="card-title">Arbre</h6>
+            <p class="card-text">Lorem ipsum dolor sit...</p>
+          </div>
+        </div>
+
+        <div class="card p-0" data-name="cars">
+          <img src="/img/voiture1.jpg" alt="img">
+          <div class="card-body">
+            <h6 class="card-title">Voiture lampe</h6>
+            <p class="card-text">Lorem ipsum dolor sit...</p>
+          </div>
+        </div>
+
+        <div class="card p-0" data-name="cars">
+          <img src="/img/voiture2.jpg" alt="img">
+          <div class="card-body">
+            <h6 class="card-title">Voiture blanche</h6>
+            <p class="card-text">Lorem ipsum dolor sit...</p>
+          </div>
+        </div>
+
+        <div class="card p-0" data-name="cars">
+          <a href="">
+          <img src="/img/voiture3.jpg" alt="img">
+          <div class="card-body">
+            <h6 class="card-title">Voiture rouge</h6>
+            <p class="card-text">Lorem ipsum dolor sit...</p>
+          </div></a>
+        </div>
+
+        <div class="card p-0" data-name="people">
+          <img src="/img/gens1.jpg" alt="img">
+          <div class="card-body">
+            <h6 class="card-title">Femme coucher de soleil</h6>
+            <p class="card-text">Lorem ipsum dolor sit...</p>
+          </div>
+        </div>
+
+        <div class="card p-0" data-name="people">
+          <img src="img/gens2.jpg" alt="img">
+          <div class="card-body">
+            <h6 class="card-title">Hommes</h6>
+            <p class="card-text">Lorem ipsum dolor sit...</p>
+          </div>
+        </div>
+
+        <div class="card p-0" data-name="people">
+          <img src="img/gens3.webp" alt="img">
+          <div class="card-body">
+            <h6 class="card-title">Femme</h6>
+            <p class="card-text">Lorem ipsum dolor sit...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

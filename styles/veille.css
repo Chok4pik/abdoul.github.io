@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+:root {
+    --color1: black;
+    --color2:white;
+    --color3:#083669;
+    --color4:#081c37;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    color: var(--color2);
+    background: var(--color3);
+    
+}
+
+h2 { 
+    font-size: 3rem ;
+}
+
+.boxed{
+    max-width: 1280px; /* resolution ou tout passe sur un écran  */
+    margin-inline: auto; /* permet de centrer la box */
+    
+}
+
+.blue{
+    background: rgb(2, 29, 59);
+
+    
+}
+
+
+
+.flexbox{
+    display: flex;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+
+.textcenter {
+    text-align: center;
+}
+
+header {
+    position: fixed; 
+    /* permet d'avoir le menu fix  */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999; 
+    /* permet de passer pardesssus tous les élements */
+    box-shadow:-3px 3px 6px 3px black ;
+    background: var(--color3);
+
+
+}
+
+.header-logo img{
+    display: block;
+    width: 100px;
+    height: 100px;
+    aspect-ratio: 1/1; /* la largeur et la hauteur de l'élément seront toujours égales, quelle que soit la taille de l'élément. */
+    object-fit: contain; /*  une image ou une vidéo est redimensionné pour s'adapter complètement à l'intérieur du conteneur.  */
+}
+
+
+.header-menu li{
+    list-style: none;
+    padding: 40px 0 10px 30px;
+
+}
+
+.header-menu a{
+    text-decoration: none;
+    color: var(--color2);
+
+}
+
+.slider {
+    width: 100%;
+    height: 60vh; /* Réduit la hauteur du slider à 60% de la hauteur de la fenêtre */
+    position: relative; 
+    overflow: hidden; /* Cache tout débordement éventuel de l'image */
+}
+
+
+
+
+.slider-background{   
+    object-fit: cover; /* permet a l'image ou a une vidéo d'entierement couvrir le conteneur */
+    filter: brightness(50%);
+
+
+
+}
+
+
+.slider-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+
+
+}
+
+.slider-content h1{
+    font-size: 3rem;
+    padding-bottom: 20px;
+    
+
+}
+
+.slider-content p{
+    margin: 0 15%;
+    font-size: 1.5rem;
+    font-weight: 400;
+    border: solid 1px;
+    border-radius: 20px;
+    border-color: aqua;
+    box-shadow: 0px 0px 11px 0px aqua;
+}
+
+.section{
+    padding: 0px 0 10px 0;
+}
+
+
+#veille h2 {
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+
+
+#veille h6 {
+    font-size: 1.0rem;
+}
+
+.p30 {
+    padding-bottom: 30px;
+    width: 900px;
+    margin: auto;
+}
+
+
+
+#veille p {
+    text-align: justify;
+}
+
+#veille ul {
+    list-style: none;
+    padding: 20px 0  30px 20px;
+}
+
+.logo-veille img {
+    width: 100px;  /* Définit la largeur à 100px (ajustez selon vos besoins) */
+    height: 100px; /* Définit la hauteur à 100px (ajustez selon vos besoins) */
+    object-fit: contain; /* Pour s'assurer que l'image garde ses proportions */
+}
+
+.logo-flexbox {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding-top: 20px;
+    padding-bottom: 100px;
+    
+}
+
+
+.logo-contain{
+    border: 1px solid white;
+    color: black;
+    background: white;
+    border-radius:   20px ;
+    padding: 10px;
+
+}
+
+
+
+.title-article span {
+    border: 1px solid  rgb(11, 235, 243);
+    margin: auto;
+    padding: 10px ;
+    border-radius: 20px;
+    font-size: 2rem;
+    box-shadow: 0 0 10px 5px #57dfd3;
+    color: rgb(255, 255, 255);
+    background: rgb(0, 0, 0);
+
+}
+
+
+
+
+.title-article  {
+
+    padding: 100px 0 40px 0;
+}
+
+
+.box-article{
+    padding-bottom: 100px;
+}
+
+
+/* Contact */
+
+.conctact-titile{
+    padding-top: 50px;
+    font-size: 2rem;
+}
+
+.contact-logo-contain {
+    width: 150px;
+    height: 120px;
+    object-fit: contain;
+    background: #ffffff;
+    border: 1px solid;
+    border-radius: 20px;
+    box-shadow:rgb(151 34 247) 0 0 12px 3px;
+    
+
+}
+
+.contact-logo-contain img{
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+}
+
+.flexbox1 {
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+
+}
+
+
+
+
+
+
+/* Footeur */
+
+.pied{
+    width: 100%;
+    height: 100px;
+    background: var(--color1);
+    
+    
+  }
+
+  .pied p{
+    text-align: center;
+    padding-top: 50px;
+
+    
+    
+  }

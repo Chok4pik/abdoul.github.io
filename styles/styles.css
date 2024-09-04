@@ -1,0 +1,741 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+:root {
+    --color1: black;
+    --color2:white;
+    --color3:#083669;
+    --color4:#081c37;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    color: var(--color2);
+    background: var(--color3);
+}
+
+h2 { 
+    font-size: 3rem ;
+}
+
+.boxed{
+    max-width: 1280px; /* resolution ou tout passe sur un écran  */
+    margin-inline: auto; /* permet de centrer la box */
+    
+}
+
+.blue{
+    background: rgb(2, 29, 59);
+
+    
+}
+
+
+
+.flexbox{
+    display: flex;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+
+.textcenter {
+    text-align: center;
+}
+
+header {
+    position: fixed; 
+    /* permet d'avoir le menu fix  */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999; 
+    /* permet de passer pardesssus tous les élements */
+    box-shadow:-3px 3px 6px 3px black ;
+    background: var(--color3);
+
+
+}
+
+.header-logo img{
+    display: block;
+    width: 100px;
+    height: 100px;
+    aspect-ratio: 1/1; /* la largeur et la hauteur de l'élément seront toujours égales, quelle que soit la taille de l'élément. */
+    object-fit: contain; /*  une image ou une vidéo est redimensionné pour s'adapter complètement à l'intérieur du conteneur.  */
+}
+
+
+.header-menu li{
+    list-style: none;
+    padding: 40px 0 10px 30px;
+
+}
+
+.header-menu a{
+    text-decoration: none;
+    color: var(--color2);
+
+}
+
+
+.slider {
+    width: 100%;
+    height: 60vh; /* Réduit la hauteur du slider à 60% de la hauteur de la fenêtre */
+    position: relative; 
+    overflow: hidden; /* Cache tout débordement éventuel de l'image */
+}
+
+.slider-background {   
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Permet à l'image de couvrir entièrement le conteneur */
+    filter: brightness(50%);
+}
+
+.slider-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    color: white; /* Assure que le texte soit visible sur l'image */
+}
+
+.slider-content h1 {
+    font-size: 2rem;
+    padding-bottom: 20px;
+}
+
+.slider-content p {
+    margin: 0 15%;
+    font-size: 1.3rem;
+    font-weight: 400;
+    border: solid 1px aqua;
+    border-radius: 20px;
+    box-shadow: 0px 0px 11px 0px aqua;
+    padding: 10px; /* Ajoute du padding pour rendre le texte plus lisible */
+}
+
+
+.section{
+    padding: 100px 0;
+}
+
+.grid{
+    display:grid ;
+    grid-template-columns: 1fr 1fr;
+    gap: 0px; /* Espace entre les éléments de la grille */
+    place-items: center;
+}
+
+.about-left-contain img {
+    width: 80%; /* Réduit la largeur à 80% du conteneur parent */
+    height: 300px; /* Réduit la hauteur à 300px */
+    object-fit: cover; /* L'image prend toute la place disponible sans déformer */
+    margin: 0 auto; /* Centre l'image horizontalement */
+    display: block; /* Assure que l'image est centrée en bloc */
+}
+
+
+.about-text {
+    padding: 0px;
+    font-size: 1.1rem;
+    font-weight: 300;
+  }
+
+.about-text ul {
+    list-style: none; /* Retire les puces */
+    padding: 0;
+    position: relative;
+    margin-left: 20px; /* Légère marge à gauche pour le positionnement des cercles */
+  }
+  
+  .about-text ul:before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #640bd8; /* Couleur du trait reliant les cercles */
+  }
+  
+  .about-text li {
+    position: relative;
+    padding-left: 30px; /* Espace pour le cercle */
+    padding-top: 5px;
+    margin-bottom: 20px; /* Espacement entre les éléments de la liste */
+  }
+  
+  .about-text li:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 15px;
+    height: 15px;
+    border: 3px solid #6906eb; /* Contour bleu du cercle */
+    background-color: white;
+    border-radius: 50%; /* Rond parfait */
+  }
+  
+  .about-text strong {
+    font-weight: bold;
+  }
+  
+
+.about-right-contain p{
+    font-size: 1.1rem;
+    font-weight: 300;
+    padding-bottom: 20px;
+    text-align: justify;
+    line-height: 1.5;
+
+    
+}
+
+.about-right-contain h2{
+    padding-bottom: 20px;
+
+    
+}
+
+.about-left-contain{
+    border: 1px solid #300f5c;
+    border-radius: 20px;
+    box-shadow: 20px 20px 0 #300f5c;
+    
+    
+}
+
+.main-btn a{
+    text-decoration: none;
+    border: solid 1px;
+    color: var(--color1);
+    border-radius: 25px;
+    padding: 10px;
+    background: #04e4e4;
+    font-weight: 500;
+    font-size: 1.3rem;
+    display: block;
+    text-align: center;
+    margin: 0 40%;
+
+}
+
+/* resposive slider header navbar */
+
+/* Media Queries pour les tablettes */
+@media (max-width: 768px) {
+    .header-logo img {
+        width: 80px; /* Réduit la taille du logo */
+        height: 80px;
+    }
+    
+    .header-menu {
+        display: none; /* Cache le menu pour le montrer en version mobile */
+    }
+
+    .slider {
+        height: 50vh; /* Réduit la hauteur du slider */
+    }
+
+    .slider-content h1 {
+        font-size: 1.5rem; /* Réduit la taille de la police */
+    }
+
+    .slider-content p {
+        font-size: 1.1rem;
+        margin: 0 10%;
+    }
+
+    .grid {
+        grid-template-columns: 1fr; /* Passe la grille en une seule colonne */
+        gap: 20px; /* Ajoute un espacement entre les sections */
+    }
+
+    .about-left-contain img {
+        width: 100%; /* L'image prend toute la largeur disponible */
+        height: auto; /* Ajuste la hauteur automatiquement */
+    }
+
+    .main-btn a {
+        margin: 0 auto; /* Centre le bouton */
+        width: 80%; /* Le bouton prend 80% de la largeur disponible */
+    }
+}
+
+/* Media Queries pour les mobiles */
+@media (max-width: 480px) {
+    .header-logo img {
+        width: 60px; /* Réduit encore la taille du logo */
+        height: 60px;
+    }
+    
+    .header-menu {
+        display: none; /* Toujours caché pour mobiles */
+    }
+
+    .slider {
+        height: 40vh; /* Réduit encore la hauteur du slider */
+    }
+
+    .slider-content h1 {
+        font-size: 1.2rem; /* Réduit encore la taille de la police */
+    }
+
+    .slider-content p {
+        font-size: 1rem;
+        margin: 0 5%;
+    }
+
+    .grid {
+        grid-template-columns: 1fr; /* Garde une seule colonne */
+        gap: 20px;
+    }
+
+    .about-left-contain img {
+        width: 100%; /* L'image prend toute la largeur disponible */
+        height: auto; /* Ajuste la hauteur automatiquement */
+    }
+
+    .main-btn a {
+        margin: 0 auto; /* Centre le bouton */
+        width: 90%; /* Le bouton prend 90% de la largeur disponible */
+    }
+}
+
+
+
+
+.grid-skill{
+    display:grid ;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 50px;
+}
+
+.logo{
+    background: var(--color2);
+    border-radius: 20px;
+    padding-bottom: 10px;
+}
+
+
+.logo img{
+    width: 100px;
+    height: 100px;
+}
+
+.logo span{
+   color: var(--color1);
+}
+
+
+.gap{
+    gap: 20px;
+}
+
+.grid-text-container {
+
+
+}
+
+.grid-text-container h3{
+    padding-top: 40px;
+    padding-left: 20;
+    font-size: 1.7rem;
+font-weight: 300;}
+
+.underlined-title {
+    text-decoration: underline; /* Surligne avec une ligne en dessous */
+}
+
+
+
+/* Timeline  */
+
+
+
+.box-timeline::before, ::after {
+    box-sizing: border-box;
+
+}
+
+
+.box-timeline {
+    width: 100%;
+    height: 1300px;
+    position: relative;
+    padding: 100px 0 0 0;
+}
+
+.ligne {
+    height: 1000px;
+    width: 8px;
+    margin: 0 auto;
+    background: #333;
+}
+
+.rond {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #000000;
+    position: absolute;
+    border: 1px solid #000;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+/* 1000 - 160 + 80 / 3 =~ 306 */
+.r1{top: 80px;}
+
+
+.box {
+    color: #333;
+    width: 400px;
+    min-height: 200px;
+    padding: 20px;
+    border-radius: 30px;
+    height: auto;
+    background: #ffffff;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.5);
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    box-shadow: -13px 17px 20px 3px #000000;
+}
+
+.box h2{
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+
+.box ul{
+    padding: 20px 20px 20px 40px;
+    font-size: 0.95rem;
+}
+
+.box li{
+    line-height: 150%;
+}
+
+.box p {
+    padding: 20px 0px;
+}
+
+.b1 {
+    top: 80px;
+    left: calc(50% - 270px);
+}
+.b2 {
+    top: 1100px;
+    left: calc(50% + 290px);
+}
+
+
+.btn {
+    display: block;
+    background: rgb(54, 6, 94);
+    padding: 10px;
+    width: 120px;
+    text-align: center;
+    color: #f1f1f1;
+    text-decoration: none;
+    border-radius: 3px;
+    margin-top: 10px;
+    margin-left: 130px;
+}
+
+@media screen and (max-width: 1000px) {
+
+    .ligne {
+        position: relative;
+        left: 200px;
+    }
+    .rond {
+        left: calc(50% + 200px);
+    }
+    .box {
+        left: calc(50% - 50px)
+    }
+
+}
+
+/* Formation */
+
+.boite-timeline::before, ::after {
+    box-sizing: border-box;
+
+}
+
+.boite-timeline {
+    width: 100%;
+    height: 700px;
+    position: relative;
+    padding: 100px 0 0 0;
+}
+
+.ligne1 {
+    height: 600px;
+    width: 8px;
+    margin: 0 auto;
+    background: #333;
+}
+
+.cercle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #000000;
+    position: absolute;
+    border: 1px solid #000;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+/* 1000 - 160 + 80 / 3 =~ 306 */
+.c1{top: 80px;}
+.c2{top: 260px;}
+.c3{top: 440px;}
+.c4{top: 620px;}
+
+.boite {
+    color: #000000;
+    width: 350px;
+    min-height: 110px;
+    padding: 20px;
+    border-radius: 50px;
+    height: auto;
+    background: #f1f1f1;
+    box-shadow: -13px 17px 20px 3px #000000;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.bo1 {
+    top: 80px;
+    left: calc(50% - 270px);
+}
+.bo2 {
+    top: 260px;
+    left: calc(50% + 270px);
+}
+.bo3 {
+    top: 440px;
+    left: calc(50% - 270px);
+}
+.bo4 {
+    top: 620px;
+    left: calc(50% + 270px);
+}
+
+.boite h3 {
+    line-height: 20px;
+    font-size: 20px;
+    padding: 10px 0 0px 10px ;
+}
+
+.boite span {
+    line-height: 20px;
+    font-size: 15px;
+    padding: 10px 0 0px 10px ;
+
+}
+
+.boite p {
+    line-height: 20px;
+    font-size: 16px;
+    padding: 10px 0 0px 10px ;
+
+}
+
+
+
+
+
+@media screen and (max-width: 1000px) {
+
+    .ligne1 {
+        position: relative;
+        left: 200px;
+    }
+    .cercle {
+        left: calc(50% + 200px);
+    }
+    .boite {
+        left: calc(50% - 50px)
+    }
+
+}
+
+/* Contact */
+
+.conctact-titile{
+    padding-top: 50px;
+    font-size: 2rem;
+}
+
+.contact-logo-contain {
+    width: 150px;
+    height: 120px;
+    object-fit: contain;
+    background: #ffffff;
+    border: 1px solid;
+    border-radius: 20px;
+    box-shadow:rgb(151 34 247) 0 0 12px 3px;
+    
+
+}
+
+.contact-logo-contain img{
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+}
+
+.flexbox1 {
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+
+}
+
+
+
+
+/* Footeur */
+
+.pied{
+    width: 100%;
+    height: 100px;
+    background: var(--color1);
+    
+    
+  }
+
+  .pied p{
+    text-align: center;
+    padding-top: 50px;
+
+    
+    
+  }
+
+/* Contactez moi  */
+/* .box-contact {
+    
+    width: 400px;
+    min-height: 200px;
+    background: #ffffff52;
+    color: #000;
+    border: 1px solid;
+    border-radius: 20px;
+    box-shadow:rgb(151 34 247) 0 0 12px 3px;
+    
+
+}
+.flexbox1 {
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+
+}
+
+
+
+.icon{
+    display: block;
+    font-size: 40px;
+    padding-top: 20px;
+}
+
+.label{    
+    display: block;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0px 0 10px 0;
+    font-size: 1.5rem;
+
+}
+
+.uppercase{
+    text-transform: uppercase;
+    font-weight: 700;
+
+
+
+}
+
+
+.value{    
+    display: block;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.value a {    
+    color: #000;
+    text-decoration: none;
+} */
+
+/* Footeur */
+
+/* .pied{
+    width: 100%;
+    height: 100px;
+    background: var(--color1);
+    
+    
+  }
+
+  .pied p{
+    text-align: center;
+    padding-top: 50px;
+
+    
+    
+  } */
+
+
+.{}
+
+
+.{}
+
+.{}
+
+.{}
+
+.{}
+
+.{}
+
+
+.{}
+
+.{}
+
+.{}
+
+.{}
+
+.{}
+

@@ -1,0 +1,65 @@
+* {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body {
+    background: #f1f1f1 !important;
+}
+
+body .container {
+    max-width: 1100px;
+}
+
+#filter-buttons button {
+    border-radius: 3px;
+    background: #fff;
+    border-color: transparent;
+}
+
+#filter-buttons button:hover {
+    background: #ddd;
+}
+
+#filter-buttons button.active {
+    background: gray;
+    color: #fff;
+}
+
+#filterable-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+#filterable-cards .card {
+    flex: 1 1 15rem;
+    max-width: calc(33.333% - 10px);
+    border: 2px solid transparent;
+    overflow: hidden;
+}
+
+#filterable-cards .card.hide {
+    display: none;
+}
+
+#filterable-cards .card.show {
+    display: block;
+}
+
+#filterable-cards .card img {
+    width: 100%; /* Assure que l'image prend toute la largeur du conteneur */
+    height: auto; /* Maintient le ratio d'aspect de l'image */
+    object-fit: cover; /* Recadre l'image pour qu'elle s'adapte au conteneur */
+}
+
+
+@media (max-width: 600px) {
+    #filterable-cards {
+        justify-content: center;
+    }
+
+    #filterable-cards .card {
+        max-width: 100%;
+    }
+}
